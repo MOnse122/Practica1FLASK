@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Portafolio{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{% endblock %}
+
+{% block headers %}
+<h1>Mi Portafolio</h1>
+<span class="subheading">Proyectos académicos y personales de desarrollo</span>
+{% endblock %}
+
+{% block content %}
+    <!-- Proyecto Destacado -->
+    <div class="row project">  	
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" src="{% static 'core/img/takeabreak.jpg' %}" alt="TakeABreak">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">TakeABreak</h2>   
+            <p>Aplicación web para mejorar la salud mental de los estudiantes universitarios mediante recomendaciones personalizadas de lectura, desarrollada con Express, MongoDB, WebSockets y React. Incluye autenticación, chat en tiempo real y panel de usuario.</p>
+            <p><a href="https://github.com/Kev-Hernandez/takeabreak_kev" target="_blank">Repositorio en GitHub</a></p>
+        </div>
+    </div>
+
+    <!-- Proyecto de Minería de Datos -->
+    <div class="row project">  	
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" src="{% static 'core/img/data-mining.jpg' %}" alt="Proyecto minería de datos">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">Análisis de emociones con regresión lineal</h2>   
+            <p>Proyecto académico donde se predicen emociones a partir de la longitud de respuestas generadas por IA. Implementado en Python con Jupyter Notebook usando Pandas, Matplotlib y Scikit-learn.</p>
+        </div>
+    </div>
+
+
+{% endblock %}
